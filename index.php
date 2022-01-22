@@ -285,7 +285,7 @@
                             <button type="submit" name="submit">Enviar</button>                            
                         </div>
                         <br>                       
-                        <div class="g-recaptcha" data-sitekey=""></div>                        
+                        <div class="g-recaptcha" data-sitekey="6LfiISEeAAAAAJb4ehrqF8BuzfRj31jLhNUFy3tz"></div>                        
                     </form>
                 </div>
             </div>
@@ -301,7 +301,7 @@ $user_subject = $_POST['subject'];
 $user_message = $_POST['message'];
 
 $email_from = 'nahuel@cacioni.com';
-$email_subject = "New Form Submission";
+$email_subject = "Nuevo Contacto";
 $email_body = "Nombre: $user_name.\n"."Email: $user_email.\n"."Asunto: $user_subject.\n"."Mensaje: $user_message.\n";
 
 $to_email = "nahuel@cacioni.com";
@@ -309,7 +309,7 @@ $headers = "De: $email_from \r\n";
 $headers .= "Responder: $user_email\r\n";
 
 
-$secretKey = "";
+$secretKey = "6LfiISEeAAAAAINAiZrJx5lGwoAdZpzmkree68nv";
 $responseKey = $_POST['g-recaptcha-response'];
 $userIP = $_SERVER['REMOTE_ADDR'];
 $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
@@ -322,14 +322,14 @@ if ($response->success){
     mail($to_email,$email_subject,$email_body,$headers);
     echo '<script type="text/javascript">
     alert("Mensaje Enviado");
-    window.location.href = "indexen.php";
+    window.location.href = "index.php";
     </script>';
 }
 
 else{
     echo '<script type="text/javascript">
     alert("Captcha Inválido, Inténtalo Nuevamente");
-    window.location.href = "indexen.php#contact";
+    window.location.href = "index.php#contact";
     </script>';
 }
 
@@ -344,9 +344,5 @@ else{
             Todos los derechos reservados.</span>
     </footer>
     <script src="js/script.js"></script>
-<<<<<<< HEAD
     <script src="js/validator.js"></script>
 </body>
-=======
-</body>
->>>>>>> a86d11b3db193ac5a7e54be9fc04dd677cdcf23e
