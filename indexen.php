@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+
 <html lang="en">
 
 <head>
@@ -8,13 +8,13 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Nahuel Gustavo Cacioni - Full-Stack Developer</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 </head>
 
 <body>
@@ -28,9 +28,10 @@
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>                
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
-                <li><a href="index.html" class="menu-btn">Spanish</a></li>
+                <li><a href="index.php" class="menu-btn">Spanish</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -86,14 +87,6 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Digital Marketing</div>
-                        <p>I do from basic social media work to SEO, SEM, search campaigns, work on different Ads
-                            platforms (Google, Facebook), among others.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
                         <i class="fas fa-code"></i>
                         <div class="text">App Development</div>
                         <p>I develop the application you need. The sky is the limit, use your imagination! Either for
@@ -110,7 +103,7 @@
             <h2 class="title">My skills</h2>
             <div class="skills-content">
                 <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
+                    <div class="text">My creative skills & experience.</div>
                     <p>I am a Full-Stack Dev focused on various technologies. I aim for a quality design approach,
                         oriented to the modern, effective and simple results. I work with different technologies depending on
                         the need of each project. Each project is unique and unrepeatable.
@@ -156,16 +149,16 @@
                     <div class="bars">
                         <div class="info">
                             <span>Python</span>
-                            <span>75%</span>
+                            <span>70%</span>
                         </div>
                         <div class="line python"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>Angular</span>
+                            <span>TypeScript</span>
                             <span>60%</span>
                         </div>
-                        <div class="line angular"></div>
+                        <div class="line typescript"></div>
                     </div>
                     <div class="bars">
                         <div class="info">
@@ -177,7 +170,7 @@
                     <div class="bars">
                         <div class="info">
                             <span>Node.js</span>
-                            <span>70%</span>
+                            <span>60%</span>
                         </div>
                         <div class="line node"></div>
                     </div>
@@ -185,6 +178,45 @@
             </div>
         </div>
     </section>
+
+    <!-- projects section start -->
+    <section class="servicesen services" id="projects">
+        <div class="max-width">
+            <h2 class="project title">My projects</h2>
+            <div class="serv-content">
+                <div class="project-card card">
+                    <div class="box">
+                        <div class="text">Project 1</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur</p>
+                            <div class="linked">
+                                <i class="cool fas fa-globe"></i>
+                                <i class="fab fa-github"></i>
+                            </div>
+                    </div>
+                </div>
+                <div class="project-card card">
+                    <div class="box">
+                        <div class="text">Project 2</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur</p>
+                            <div class="linked">
+                                <i class="cool fas fa-globe"></i>
+                                <i class="fab fa-github"></i>
+                            </div>
+                    </div>
+                </div>     
+                <div class="project-card card">
+                    <div class="box">
+                        <div class="text">Project 3</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur</p>
+                            <div class="linked">
+                                <i class="cool fas fa-globe"></i>
+                                <i class="fab fa-github"></i>
+                            </div>
+                    </div>
+                </div>         
+            </div>
+        </div>        
+    </section>        
 
     <!-- contact section start -->
     <section class="contacten contact services" id="contact">
@@ -220,7 +252,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Send a message</div>
-                    <form id="contact-form" class="contact" name="contact-form" method="post" action="php/contact.php">
+                    <form id="contact-form" class="contact" name="contact-form" method="post" action="indexen.php">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" name="name" placeholder="Name" required>
@@ -230,17 +262,66 @@
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" name="message" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message..." required></textarea>
+                            <textarea name="message" cols="30" rows="10" placeholder="Message..." required></textarea>
                         </div>
                         <div class="button-area">
-                            <button type="submit">Submit</button>
+                        <button type="submit" name="submit">Submit</button>
                         </div>
+                        <br>                       
+                        <div class="g-recaptcha" data-sitekey="6LfiISEeAAAAAJb4ehrqF8BuzfRj31jLhNUFy3tz"></div>   
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="phpform">
+        <?php
+
+if(isset($_POST['submit'])){
+
+$user_name = $_POST['name'];
+$user_email = $_POST['email'];
+$user_subject = $_POST['subject'];
+$user_message = $_POST['message'];
+
+$email_from = 'nahuel@cacioni.com';
+$email_subject = "New Form Submission";
+$email_body = "Nombre: $user_name.\n"."Email: $user_email.\n"."Asunto: $user_subject.\n"."Mensaje: $user_message.\n";
+
+$to_email = "nahuel@cacioni.com";
+$headers = "De: $email_from \r\n";
+$headers .= "Responder: $user_email\r\n";
+
+
+$secretKey = "6LfiISEeAAAAAINAiZrJx5lGwoAdZpzmkree68nv";
+$responseKey = $_POST['g-recaptcha-response'];
+$userIP = $_SERVER['REMOTE_ADDR'];
+$url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
+
+$response = file_get_contents($url);
+$response = json_decode($response);
+
+if ($response->success){
+    
+    mail($to_email,$email_subject,$email_body,$headers);
+    echo '<script type="text/javascript">
+    alert("Message Sent");
+    window.location.href = "indexen.php";
+    </script>';
+}
+
+else{
+    echo '<script type="text/javascript">
+    alert("Invalid Captcha, Please Try Again");
+    window.location.href = "indexen.php#contact";
+    </script>';
+}
+
+}
+
+?>
         </div>
     </section>
     <!-- footer section start -->

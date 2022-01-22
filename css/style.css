@@ -264,18 +264,37 @@ section .title::after{
 .title::before{
     background: var(--white);
 }
+
+.services .contactitle::before,
+.contactitle::before{
+    background: var(--black);
+}
+
 .servicessp .title::after,
 .title::after{
     background: var(--black);
     content: "lo que realizo";
 }
+
 .servicesen .title::after,
 .title::after{
     background: var(--black);
     content: "what I do";
 }
+
+.servicessp .project::after,
+.project::after{
+    background: var(--black);
+    content: "lo que realicé";
+}
+
+.servicesen .project::after,
+.project::after{
+    background: var(--black);
+    content: "what I made";
+}
 .services .serv-content .card{
-    width: calc(33% - 20px);
+    width: calc(50% - 20px);
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -283,6 +302,11 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+.services .serv-content .project-card{
+    width: calc(33% - 20px);
+}
+
 .services .serv-content .card:hover{
     background: var(--reddragon);
 }
@@ -297,6 +321,16 @@ section .title::after{
     color: var(--reddragon);
     transition: color 0.3s ease;
 }
+
+.services .serv-content .project-card .linked i{
+    font-size: 20px;
+    color: var(--white);
+    transition: color 0.3s ease;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .services .serv-content .card:hover i{
     color: var(--white);
 }
@@ -382,19 +416,25 @@ section .title::after{
     width: 70%;
 }
 .skills-content .right .python::before{
-    width: 75%;
+    width: 70%;
 }
-.skills-content .right .angular::before{
+.skills-content .right .typescript::before{
     width: 60%;
 }
 .skills-content .right .react::before{
     width: 60%;
 }
 .skills-content .right .node::before{
-    width: 70%;
+    width: 60%;
 }
 
 /* contact section style */
+
+.contact{
+    color:var(--black);
+    background: var(--white);
+}
+
 .contactsp .title::after{
     content: "comunícate";
 }
@@ -492,11 +532,12 @@ section .title::after{
   color: var(--reddragon);
   background: none;
 }
+
 /* footer section style */
 footer{
-    background: var(--black);
+    background: var(--white);
     padding: 15px 23px;
-    color: var(--white);
+    color: var(--black);
     text-align: center;
 }
 footer span a{
