@@ -342,5 +342,9 @@ else{
             All rights reserved.</span>
     </footer>
     <script src="js/scripten.js"></script>
+<<<<<<< HEAD
     <script src="js/validatoren.js"></script>
 </body>
+=======
+</body>
+>>>>>>> a86d11b3db193ac5a7e54be9fc04dd677cdcf23e

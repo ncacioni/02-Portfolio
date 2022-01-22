@@ -344,5 +344,9 @@ else{
             Todos los derechos reservados.</span>
     </footer>
     <script src="js/script.js"></script>
+<<<<<<< HEAD
     <script src="js/validator.js"></script>
 </body>
+=======
+</body>
+>>>>>>> a86d11b3db193ac5a7e54be9fc04dd677cdcf23e
