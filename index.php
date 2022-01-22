@@ -254,26 +254,38 @@
                 
                 <div class="column right">
                     <div class="text">Envíame un mensaje</div>
-                    <form id="contact-form" class="contact" name="contact-form" method="POST" action="index.php">
+                    <form id="contact-form" class="contact" name="contact-form" method="POST" onsubmit="return checkInputs()" action="index.php">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" name="name" placeholder="Nombre" required>
+                                <input type="text" name="name" id="name" placeholder="Nombre" >
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
                             </div>
                             <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="text" name="email" id="email" placeholder="Email" >
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" name="subject" placeholder="Asunto" required>
+                            <input type="text" name="subject" id="subject" placeholder="Asunto" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error Message</small>
                         </div>
                         <div class="field textarea">
-                            <textarea name="message" cols="30" rows="10" placeholder="Mensaje..." required></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje..." ></textarea>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error Message</small>
                         </div>
                         <div class="button-area">
                             <button type="submit" name="submit">Enviar</button>                            
                         </div>
                         <br>                       
-                        <div class="g-recaptcha" data-sitekey="6LfiISEeAAAAAJb4ehrqF8BuzfRj31jLhNUFy3tz"></div>                        
+                        <div class="g-recaptcha" data-sitekey=""></div>                        
                     </form>
                 </div>
             </div>
@@ -297,7 +309,7 @@ $headers = "De: $email_from \r\n";
 $headers .= "Responder: $user_email\r\n";
 
 
-$secretKey = "6LfiISEeAAAAAINAiZrJx5lGwoAdZpzmkree68nv";
+$secretKey = "";
 $responseKey = $_POST['g-recaptcha-response'];
 $userIP = $_SERVER['REMOTE_ADDR'];
 $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
@@ -310,14 +322,14 @@ if ($response->success){
     mail($to_email,$email_subject,$email_body,$headers);
     echo '<script type="text/javascript">
     alert("Mensaje Enviado");
-    window.location.href = "index.php";
+    window.location.href = "indexen.php";
     </script>';
 }
 
 else{
     echo '<script type="text/javascript">
-    alert("Captcha Inválido, Inténtalo De Nuevo");
-    window.location.href = "index.php#contact";
+    alert("Captcha Inválido, Inténtalo Nuevamente");
+    window.location.href = "indexen.php#contact";
     </script>';
 }
 
@@ -332,4 +344,5 @@ else{
             Todos los derechos reservados.</span>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/validator.js"></script>
 </body>

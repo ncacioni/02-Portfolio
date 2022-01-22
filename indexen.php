@@ -221,7 +221,7 @@
     <!-- contact section start -->
     <section class="contacten contact services" id="contact">
         <div class="max-width">
-            <h2 class="title">Contact</h2>
+            <h2 class="contactitle title">Contact</h2>
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in touch</div>
@@ -252,26 +252,38 @@
                 </div>
                 <div class="column right">
                     <div class="text">Send a message</div>
-                    <form id="contact-form" class="contact" name="contact-form" method="post" action="indexen.php">
+                    <form id="contact-form" class="contact" name="contact-form" method="POST" onsubmit="return checkInputs()" action="indexen.php">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="text" name="name" id="name" placeholder="Name">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
                             </div>
                             <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="text" name="email" id="email" placeholder="Email">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error Message</small>
                         </div>
                         <div class="field textarea">
-                            <textarea name="message" cols="30" rows="10" placeholder="Message..." required></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..."></textarea>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error Message</small>
                         </div>
                         <div class="button-area">
                         <button type="submit" name="submit">Submit</button>
                         </div>
                         <br>                       
-                        <div class="g-recaptcha" data-sitekey="6LfiISEeAAAAAJb4ehrqF8BuzfRj31jLhNUFy3tz"></div>   
+                        <div class="g-recaptcha" data-sitekey=""></div>   
                     </form>
                 </div>
             </div>
@@ -295,7 +307,7 @@ $headers = "De: $email_from \r\n";
 $headers .= "Responder: $user_email\r\n";
 
 
-$secretKey = "6LfiISEeAAAAAINAiZrJx5lGwoAdZpzmkree68nv";
+$secretKey = "";
 $responseKey = $_POST['g-recaptcha-response'];
 $userIP = $_SERVER['REMOTE_ADDR'];
 $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
@@ -330,4 +342,5 @@ else{
             All rights reserved.</span>
     </footer>
     <script src="js/scripten.js"></script>
+    <script src="js/validatoren.js"></script>
 </body>
