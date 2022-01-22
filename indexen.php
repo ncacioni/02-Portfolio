@@ -271,7 +271,7 @@
                         <button type="submit" name="submit">Submit</button>
                         </div>
                         <br>                       
-                        <div class="g-recaptcha" data-sitekey="6LfiISEeAAAAAJb4ehrqF8BuzfRj31jLhNUFy3tz"></div>   
+                        <div class="g-recaptcha" data-sitekey=""></div>   
                     </form>
                 </div>
             </div>
@@ -295,7 +295,7 @@ $headers = "De: $email_from \r\n";
 $headers .= "Responder: $user_email\r\n";
 
 
-$secretKey = "6LfiISEeAAAAAINAiZrJx5lGwoAdZpzmkree68nv";
+$secretKey = "";
 $responseKey = $_POST['g-recaptcha-response'];
 $userIP = $_SERVER['REMOTE_ADDR'];
 $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
