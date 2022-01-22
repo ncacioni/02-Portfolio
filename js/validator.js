@@ -6,27 +6,28 @@ const msg = document.getElementById('message');
 
 function checkInputs() {
 
+    let isValid = true;
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const subjectValue = subject.value.trim();
     const msgValue = msg.value.trim();
 
     if(usernameValue === '') {
-        setErrorForUser(username, 'El Nombre no puede estar vacío');
-        return false;
+        setErrorForUser(username, 'El nombre no puede estar vacío');
+        isValid = false;
     }
     else{
         setSuccessForUser(username);
     }
 
     if(emailValue === '') {
-        setErrorForEmail(email, 'El Email no puede estar vacío');
-        return false;
+        setErrorForEmail(email, 'El email no puede estar vacío');
+        isValid = false;
     }
 
     else if(!isEmail(emailValue)){
         setErrorForEmail(email, 'Email inválido');
-        return false;
+        isValid = false;
     }
 
     else {
@@ -35,7 +36,7 @@ function checkInputs() {
     
     if(subjectValue === '') {
         setErrorForSubject(subject, 'Inserta un asunto');
-        return false;
+        isValid = false;
     }
 
     else{
@@ -44,14 +45,14 @@ function checkInputs() {
 
     if(msgValue === '') {
         setErrorForMsg(msg, 'Escribe tu mensaje');
-        return false;
+        isValid = false;
     }
 
     else{
         setSuccessForMsg(msg);
     }
 
-    return true;
+    return isValid;
 
 }
 

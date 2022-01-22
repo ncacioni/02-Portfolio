@@ -5,7 +5,8 @@ const subject = document.getElementById('subject');
 const msg = document.getElementById('message');
 
 function checkInputs() {
-
+    
+    let isValid = true;
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const subjectValue = subject.value.trim();
@@ -13,7 +14,7 @@ function checkInputs() {
 
     if(usernameValue === '') {
         setErrorForUser(username, 'Name cannot be blank');
-        return false;
+        isValid = false;
     }
     else{
         setSuccessForUser(username);
@@ -21,12 +22,12 @@ function checkInputs() {
 
     if(emailValue === '') {
         setErrorForEmail(email, 'Email cannot be blank');
-        return false;
+        isValid = false;
     }
 
     else if(!isEmail(emailValue)){
         setErrorForEmail(email, 'Invalid email');
-        return false;
+        isValid = false;
     }
 
     else {
@@ -35,7 +36,7 @@ function checkInputs() {
     
     if(subjectValue === '') {
         setErrorForSubject(subject, 'Subject cannot be blank');
-        return false;
+        isValid = false;
     }
 
     else{
@@ -44,14 +45,14 @@ function checkInputs() {
 
     if(msgValue === '') {
         setErrorForMsg(msg, 'Message cannot be blank');
-        return false;
+        isValid = false;
     }
 
     else{
         setSuccessForMsg(msg);
     }
 
-    return true;
+    return isValid;
 
 }
 
