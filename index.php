@@ -184,36 +184,34 @@
         <div class="max-width">
             <h2 class="project title">Mis proyectos</h2>
             <div class="serv-content">
-                <div class="project-card card">
+                <a href="https://ncacioni.github.io/React-Calculator/" class="project-card card project01">
                     <div class="box">
-                        <div class="text">Project 1</div>
-                        <p>Lorem ipsum dolor, sit amet consectetur</p>
-                            <div class="linked">
-                                <i class="cool fas fa-globe"></i>
-                                <i class="fab fa-github"></i>
-                            </div>
+                        <div class="text">Simple Calculator</div>
+                        <p>Calculadora básica realizada en React</p>
+                        <div class="techs">
+                            <i class="fab fa-react"></i>
+                            <i class="fab fa-js-square"></i>
+                        </div>                        
                     </div>
-                </div>
-                <div class="project-card card">
+                </a>
+                <a href="https://ncacioni.github.io/React-Calculator/" class="project-card card project02">
                     <div class="box">
-                        <div class="text">Project 2</div>
-                        <p>Lorem ipsum dolor, sit amet consectetur</p>
-                            <div class="linked">
-                                <i class="cool fas fa-globe"></i>
-                                <i class="fab fa-github"></i>
-                            </div>
+                        <div class="text">Proyecto 2</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur</p>  
+                        <div class="techs">
+                            <i class="fas fa-spinner"></i>
+                        </div>            
                     </div>
-                </div>     
-                <div class="project-card card">
+                </a>
+                <a href="https://ncacioni.github.io/React-Calculator/" class="project-card card project03">
                     <div class="box">
-                        <div class="text">Project 3</div>
-                        <p>Lorem ipsum dolor, sit amet consectetur</p>
-                            <div class="linked">
-                                <i class="cool fas fa-globe"></i>
-                                <i class="fab fa-github"></i>
-                            </div>
+                        <div class="text">Proyecto 3</div>
+                        <p>Lorem ipsum dolor, sit amet consectetur</p>  
+                        <div class="techs">
+                            <i class="fas fa-spinner"></i>
+                        </div>           
                     </div>
-                </div>         
+                </a>
             </div>
         </div>        
     </section>        
