@@ -322,9 +322,9 @@ section .title::after{
     transition: color 0.3s ease;
 }
 
-.services .serv-content .project-card .linked i{
-    font-size: 20px;
-    color: var(--white);
+.services .serv-content .project-card .techs i{
+    font-size: 35px;
+    color: var(--reddragon);
     transition: color 0.3s ease;
     padding-top: 30px;
     padding-left: 15px;
@@ -707,4 +707,30 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+
+/* Projects design*/
+
+.services .serv-content .project-card.project01{
+    background-image: url(../images/01.png);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}
+
+.services .serv-content .project-card.project02{
+    background-image: url();
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    visibility: hidden;
+}
+
+.services .serv-content .project-card.project03{
+    background-image: url();
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    visibility: hidden;
 }
